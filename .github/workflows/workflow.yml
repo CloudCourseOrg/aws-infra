@@ -1,9 +1,11 @@
-name: Testing terra format on pull request
+name: Test format on PR
 
 on:
   pull_request:
     branches:
       - main
+      
+  workflow_dispatch:
 
 jobs:
   lint:
@@ -13,7 +15,7 @@ jobs:
       - name: Check out code
         uses: actions/checkout@v2
 
-      - name: Setting up Terraform
+      - name: Setup Terraform
         uses: hashicorp/setup-terraform@v1
         with:
           terraform_version: 1.0.9
