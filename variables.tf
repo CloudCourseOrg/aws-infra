@@ -1,9 +1,8 @@
 variable "region" {
-  default     = "us-east-1"
-  description = "this is the default region"
+  default = "us-east-1"
 }
 
-variable "env" {
+variable "environment" {
   default = "demo"
 }
 
@@ -16,7 +15,7 @@ variable "vpc_instance_tenancy" {
 }
 
 variable "subnet_count" {
-  default = 3
+  default = 1
 }
 
 variable "subnet_bits" {
@@ -28,21 +27,47 @@ variable "vpc_name" {
 }
 
 variable "vpc_internet_gateway_name" {
-  default = "IGWvpc1"
+  default = "vpc1IG"
 }
 
 variable "vpc_public_subnet_name" {
-  default = "PublicSubnetvpc1"
+  default = "vpc1PublicSubnet"
 }
 
-variable "vpc_public_routetable_name" {
-  default = "PublicRouteTablevpc1"
+variable "vpc_public_rt_name" {
+  default = "vpc1PublicRT"
 }
 
 variable "vpc_private_subnet_name" {
-  default = "PrivateSubnetvpc1"
+  default = "vpc1PrivateSubnet"
 }
 
-variable "vpc_private_routetable_name" {
-  default = "PrivateRouteTablevpc1"
+variable "vpc_private_rt_name" {
+  default = "vpc1PrivateRT"
+}
+
+# Instance creation config.
+
+variable "ami_key_pair_name" {
+  default = "ec2_test"
+}
+
+variable "ami_id" {
+  default = "ami-034193bbb4344d0ff"
+}
+
+variable "instance_type" {
+  default = "t2.micro"
+}
+
+variable "volume_type" {
+  default = "gp2"
+}
+
+variable "volume_size" {
+  default = 30
+}
+
+variable "app_port" {
+  default = 3000
 }
