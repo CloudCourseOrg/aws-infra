@@ -49,11 +49,11 @@ variable "vpc_private_rt_name" {
 # Instance creation config.
 
 variable "ami_key_pair_name" {
-  default = "ec2_test"
+  default = "ec2"
 }
 
 variable "ami_id" {
-  default = "ami-034193bbb4344d0ff"
+  default = "ami-05f26105686d632b8"
 }
 
 variable "instance_type" {
