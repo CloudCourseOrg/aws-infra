@@ -15,7 +15,7 @@ variable "vpc_instance_tenancy" {
 }
 
 variable "subnet_count" {
-  default = 1
+  default = 3
 }
 
 variable "subnet_bits" {
@@ -53,7 +53,7 @@ variable "ami_key_pair_name" {
 }
 
 variable "ami_id" {
-  default = "ami-05f26105686d632b8"
+  default = "ami-0bb73e7db9900d411"
 }
 
 variable "instance_type" {
@@ -65,9 +65,32 @@ variable "volume_type" {
 }
 
 variable "volume_size" {
-  default = 30
+  default = 50
 }
 
 variable "app_port" {
   default = 3000
+}
+
+//RDS
+
+variable "username" {
+  default = "csye6225"
+}
+variable "password" {
+  default = "Asdfghjklz13"
+}
+variable "engine_version" {
+  default = "8.0"
+}
+
+variable "identifier" {
+  default = "csye6225"
+}
+variable "db_name" {
+  default = "cloud_web"
+}
+
+variable "db_port" {
+  default = 3306
 }
