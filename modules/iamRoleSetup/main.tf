@@ -1,27 +1,27 @@
 resource "aws_iam_policy" "policy" {
-    name        = "WebAppS3"
-    description = "WebAppS3 policy"
+  name        = "WebAppS3"
+  description = "WebAppS3 policy"
 
-    # Terraform's "jsonencode" function converts a
-    # Terraform expression result to valid JSON syntax.
-    policy = jsonencode({
-        "Version": "2012-10-17",
-        "Statement": [
-            {
-                "Action": [
-                    "s3:GetObject",
-                    "s3:DeleteObject",
-                    "s3:PutObject",
-                    "s3:ListObject"                    
-                ],
-                "Effect": "Allow",
-                "Resource": [
-                    "arn:aws:s3:::${var.s3_bucket}",
-                    "arn:aws:s3:::${var.s3_bucket}/*"
-                ]
-            }
+  # Terraform's "jsonencode" function converts a
+  # Terraform expression result to valid JSON syntax.
+  policy = jsonencode({
+    "Version" : "2012-10-17",
+    "Statement" : [
+      {
+        "Action" : [
+          "s3:GetObject",
+          "s3:DeleteObject",
+          "s3:PutObject",
+          "s3:ListObject"
+        ],
+        "Effect" : "Allow",
+        "Resource" : [
+          "arn:aws:s3:::${var.s3_bucket}",
+          "arn:aws:s3:::${var.s3_bucket}/*"
         ]
-    })
+      }
+    ]
+  })
 }
 
 resource "aws_iam_role" "iam_role" {

@@ -2,11 +2,11 @@ resource "random_uuid" "uuid" {
 }
 
 resource "aws_s3_bucket" "s3_bucket" {
-  bucket = "${random_uuid.uuid.result}-${var.environment}"
+  bucket        = "${random_uuid.uuid.result}-${var.environment}"
   force_destroy = true
 
   tags = {
-    Name        = "${random_uuid.uuid.result}"
+    Name = "${random_uuid.uuid.result}"
   }
 }
 
@@ -37,7 +37,7 @@ resource "aws_s3_bucket_server_side_encryption_configuration" "s3encrypt" {
 
   rule {
     apply_server_side_encryption_by_default {
-      sse_algorithm     = "AES256"
+      sse_algorithm = "AES256"
     }
   }
 }

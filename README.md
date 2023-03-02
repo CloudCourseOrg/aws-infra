@@ -1,7 +1,7 @@
 # aws-infra
 
 INTRODUCTION
-Configuration creates set of VPC resources in Dev and Demo environment.
+Configuration  creates set of VPC resources in Dev and Demo environment.
 
 Commands ---
 
