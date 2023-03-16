@@ -59,3 +59,11 @@ variable "ec2_profile_name" {
 variable "s3_bucket" {
   type = string
 }
+
+variable "zone_id" {
+  type = string
+}
+
+variable "record_creation_name" {
+  type = string
+}
