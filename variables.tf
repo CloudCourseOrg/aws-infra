@@ -1,3 +1,11 @@
+variable "zone_id" {
+  type = string
+}
+
+variable "record_creation_name" {
+  type = string
+}
+
 variable "region" {
   default = "us-east-1"
 }
@@ -27,23 +35,23 @@ variable "vpc_name" {
 }
 
 variable "vpc_internet_gateway_name" {
-  default = "vpc1IG"
+  default = "IGvpc1"
 }
 
 variable "vpc_public_subnet_name" {
-  default = "vpc1PublicSubnet"
+  default = "PublicSubnetvpc1"
 }
 
 variable "vpc_public_rt_name" {
-  default = "vpc1PublicRT"
+  default = "PublicRTvpc1"
 }
 
 variable "vpc_private_subnet_name" {
-  default = "vpc1PrivateSubnet"
+  default = "PrivateSubnetvpc1"
 }
 
 variable "vpc_private_rt_name" {
-  default = "vpc1PrivateRT"
+  default = "PrivateRTvpc1"
 }
 
 # Instance creation config.
@@ -53,7 +61,6 @@ variable "ami_key_pair_name" {
 }
 
 variable "ami_id" {
-  default = "ami-0bb73e7db9900d411"
 }
 
 variable "instance_type" {
@@ -78,7 +85,6 @@ variable "username" {
   default = "csye6225"
 }
 variable "password" {
-  default = "Asdfghjklz13"
 }
 variable "engine_version" {
   default = "8.0"
@@ -88,9 +94,10 @@ variable "identifier" {
   default = "csye6225"
 }
 variable "db_name" {
-  default = "cloud_web"
+  default = "cloud2"
 }
 
 variable "db_port" {
   default = 3306
 }
+
