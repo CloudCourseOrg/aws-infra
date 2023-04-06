@@ -58,7 +58,7 @@ module "instance_create" {
   application_load_balancer_dns_name = module.loadbalancer.application_load_balancer_dns_name
   application_load_balancer_zone_id  = module.loadbalancer.application_load_balancer_zone_id
   aws_lb_target_group_arn            = module.loadbalancer.aws_lb_target_group_arn
-  sec_group_application = module.sec_group_setup.sec_group_application
+  sec_group_application              = module.sec_group_setup.sec_group_application
 }
 
 module "vpc_setup" {
@@ -79,8 +79,8 @@ module "vpc_setup" {
 module "sec_group_setup" {
   source = "./modules/securityGroup"
 
-  vpc_id   = module.vpc_setup.vpc_id
-  app_port = var.app_port
+  vpc_id          = module.vpc_setup.vpc_id
+  app_port        = var.app_port
   sec_group_id_lb = module.loadbalancer.sec_group_id_lb
 }
 

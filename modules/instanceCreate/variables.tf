@@ -41,7 +41,7 @@ variable "db_name" {
 }
 
 variable "app_port" {
-  type = number
+  type    = number
   default = 3000
 }
 
@@ -50,7 +50,7 @@ variable "host_name" {
 }
 
 variable "db_port" {
-  type = number
+  type    = number
   default = 3306
 }
 

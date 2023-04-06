@@ -13,6 +13,6 @@ variable "subnet_ids" {
 }
 
 variable "app_port" {
-  type = number
+  type    = number
   default = 3000
 }

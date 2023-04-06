@@ -18,17 +18,17 @@ resource "aws_security_group" "application" {
   #   cidr_blocks = ["0.0.0.0/0"]
   # }
   ingress {
-    description = "SSH ingress"
-    from_port   = 22
-    to_port     = 22
-    protocol    = "tcp"
+    description     = "SSH ingress"
+    from_port       = 22
+    to_port         = 22
+    protocol        = "tcp"
     security_groups = [var.sec_group_id_lb]
   }
   ingress {
-    description = "Application ingress"
-    from_port   = var.app_port
-    to_port     = var.app_port
-    protocol    = "tcp"
+    description     = "Application ingress"
+    from_port       = var.app_port
+    to_port         = var.app_port
+    protocol        = "tcp"
     security_groups = [var.sec_group_id_lb]
   }
 

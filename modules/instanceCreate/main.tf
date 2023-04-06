@@ -51,9 +51,9 @@ resource "aws_launch_template" "app_server" {
   depends_on = [
     var.sec_group_application
   ]
-  image_id            = var.ami_id
-  instance_type        = var.instance_type
-  key_name             = var.ami_key_pair_name
+  image_id      = var.ami_id
+  instance_type = var.instance_type
+  key_name      = var.ami_key_pair_name
   # iam_instance_profile = var.ec2_profile_name
   iam_instance_profile {
     name = var.ec2_profile_name
@@ -83,19 +83,19 @@ resource "aws_launch_template" "app_server" {
     }
   }
 
-  
+
   user_data = base64encode(data.template_file.userData.rendered)
-  
+
   # subnet_id = var.subnet_ids[0]
-  
+
 }
 
 resource "aws_autoscaling_group" "app_autoscaling_group" {
-  name                = "csye6225-asg"
-  default_cooldown    = 60
-  min_size            = 1
-  max_size            = 3
-  desired_capacity    = 1
+  name             = "csye6225-asg"
+  default_cooldown = 60
+  min_size         = 1
+  max_size         = 3
+  desired_capacity = 1
   # subnet_id = var.subnet_ids[0]
   # vpc_zone_identifier = [for subnet in aws_subnet.public-subnet : subnet.id]
   vpc_zone_identifier = var.subnet_ids
