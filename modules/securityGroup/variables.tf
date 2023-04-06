@@ -5,3 +5,6 @@ variable "vpc_id" {
 variable "app_port" {
   type = number
 }
+variable "sec_group_id_lb" {
+  type = string
+}

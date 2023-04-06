@@ -41,7 +41,8 @@ variable "db_name" {
 }
 
 variable "app_port" {
-  type = number
+  type    = number
+  default = 3000
 }
 
 variable "host_name" {
@@ -49,7 +50,8 @@ variable "host_name" {
 }
 
 variable "db_port" {
-  type = number
+  type    = number
+  default = 3306
 }
 
 variable "ec2_profile_name" {
@@ -67,3 +69,18 @@ variable "zone_id" {
 variable "record_creation_name" {
   type = string
 }
+variable "application_load_balancer_dns_name" {
+  type = string
+}
+variable "application_load_balancer_zone_id" {
+  type = string
+}
+variable "aws_lb_target_group_arn" {
+  type = string
+}
+variable "sec_group_application" {
+  # type = string
+}
+
+
+
