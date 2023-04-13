@@ -215,33 +215,7 @@ resource "aws_kms_key" "webapp-kms-ec2" {
         "Action" : "kms:*",
         "Resource" : "*"
       },
-      {
-        "Sid" : "Allow access for Key Administrators",
-        "Effect" : "Allow",
-        "Principal" : {
-          "AWS" : [
-            "arn:aws:iam::${data.aws_caller_identity.current.account_id}:role/aws-service-role/elasticloadbalancing.amazonaws.com/AWSServiceRoleForElasticLoadBalancing",
-            "arn:aws:iam::${data.aws_caller_identity.current.account_id}:role/aws-service-role/autoscaling.amazonaws.com/AWSServiceRoleForAutoScaling"
-          ]
-        },
-        "Action" : [
-          "kms:Create*",
-          "kms:Describe*",
-          "kms:Enable*",
-          "kms:List*",
-          "kms:Put*",
-          "kms:Update*",
-          "kms:Revoke*",
-          "kms:Disable*",
-          "kms:Get*",
-          "kms:Delete*",
-          "kms:TagResource",
-          "kms:UntagResource",
-          "kms:ScheduleKeyDeletion",
-          "kms:CancelKeyDeletion"
-        ],
-        "Resource" : "*"
-      },
+      
       {
         "Sid" : "Allow use of the key",
         "Effect" : "Allow",
