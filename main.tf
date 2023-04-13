@@ -87,8 +87,9 @@ module "sec_group_setup" {
 module "loadbalancer" {
   source = "./modules/loadbalancer"
 
-  vpc_id     = module.vpc_setup.vpc_id
-  subnet_ids = module.vpc_setup.subnet_ids
+  vpc_id               = module.vpc_setup.vpc_id
+  subnet_ids           = module.vpc_setup.subnet_ids
+  record_creation_name = var.record_creation_name
 
 }
 
