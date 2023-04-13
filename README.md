@@ -56,8 +56,6 @@ Use Terraform for Infrastructure as Code. Set up a Virtual Private Cloud (VPC) i
     ```shell
       terraform destroy
     ```
-CLi command to add ssl certificate details ----
-aws acm import-certificate --certificate C:/Users/arpit/Downloads/demo_arpitsamsung.me/demo_arpitsamsung_me.crt --certificate-chain demo_arpitsamsung_me.ca-bundle --private-key C:/Users/arpit/Downloads/demo_arpitsamsung.me/privateKey.txt --profile demo
 
 CLi command to add ssl certificate details ---- <br/><br/>
  <b>aws acm import-certificate --certificate C:/Users/arpit/Downloads/demo_arpitsamsung.me/demo_arpitsamsung_me.crt --certificate-chain demo_arpitsamsung_me.ca-bundle --private-key C:/Users/arpit/Downloads/demo_arpitsamsung.me/privateKey.txt --profile demo<b>
