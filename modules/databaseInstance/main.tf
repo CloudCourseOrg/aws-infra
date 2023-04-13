@@ -66,7 +66,7 @@ resource "aws_kms_key" "webapp-kms-rds" {
         "Action" : "kms:*",
         "Resource" : "*"
       },
-            {
+      {
         "Sid" : "Allow use of the key",
         "Effect" : "Allow",
         "Principal" : {

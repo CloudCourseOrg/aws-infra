@@ -215,7 +215,7 @@ resource "aws_kms_key" "webapp-kms-ec2" {
         "Action" : "kms:*",
         "Resource" : "*"
       },
-      
+
       {
         "Sid" : "Allow use of the key",
         "Effect" : "Allow",
